@@ -1,36 +1,29 @@
 /******************************************************************************
-Autor:Obed Joacim Galván Alvarado
-Fecha:16/03/25
-Descripción:El siguiente código calcula la edad de una persona, para determinar
-si es mayor de edad o menor de edad para ingresar a un Bar.
-
+Autor: Obed Joacim Galván Alvarado.
+Fecha: 22/03/26
+Descripción: El siguiente código nos ayuda a generar la suma, resta, multiplicacio
+y división de dos numeros ingresados por el usuario.
 *******************************************************************************/
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main() {
-    string edadTexto;
-    int edad;
+    float num1, num2;
 
-    cout << "Ingresa tu edad: ";
-    cin >> edadTexto;
+    // Solicitar primer número
+    cout << "Hola, escribe tu primer numero: ";
+    cin >> num1;
 
-    // Validar máximo 2 dígitos
-    if (edadTexto.length() > 2) {
-        cout << "Error: solo puedes ingresar maximo 2 digitos." << endl;
-        return 0;
-    }
+    // Solicitar segundo número
+    cout << "Bien, escribe tu segundo numero: ";
+    cin >> num2;
 
-    // Convertir a entero
-    edad = stoi(edadTexto);
-
-    // Validar mayoría de edad
-    if (edad >= 18) {
-        cout << "Eres mayor de edad, puedes ingresar." << endl;
-    } else {
-        cout << "Upss, lo siento eres menor de edad no puedes ingresar." << endl;
-    }
+    // Mostrar resultados
+    cout << "\nEste es el resultado de la suma, resta, multiplicacion y division:\n";
+    cout << "1. Suma: " << num1 + num2 << endl;
+    cout << "2. Resta: " << num1 - num2 << endl;
+    cout << "3. Multiplicacion: " << num1 * num2 << endl;
+    cout << "4. Division: " << num1 / num2 << endl;
 
     return 0;
 }
